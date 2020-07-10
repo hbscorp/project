@@ -16,4 +16,4 @@ jobs:
         CLUSTER_NAME: cluster-1
         ZONE_NAME: us-central1-c
       with:
-        args: apply -f /k8s/
+        args: apply -f ./k8s/
