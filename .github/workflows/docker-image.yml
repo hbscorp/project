@@ -14,5 +14,5 @@ jobs:
                 username: ${{ secrets.DOCKER_USERNAME }}
                 # Password used to login docker registry
                 password: ${{ secrets.DOCKER_PASSWORD }}
-                path: hbscorp/project
+                #path: hbscorp/project
                 push: true
