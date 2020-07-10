@@ -8,7 +8,7 @@ jobs:
 
         steps:
             - name: Publish Docker Action
-              uses: jerray/publish-docker-action@v1.0.5
+              uses: docker/build-push-action@v1.1.0
               with:
                 # Username used to login docker registry
                 username: ${{ secrets.DOCKER_USERNAME }}
