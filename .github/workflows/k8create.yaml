@@ -7,7 +7,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v2
     - name: kubectl - Google Cloud GKE cluster.
       uses: ameydev/gke-kubectl-action@master
       env:
@@ -16,4 +16,4 @@ jobs:
         CLUSTER_NAME: cluster-1
         ZONE_NAME: us-central1-c
       with:
-        args: apply -f ./k8s/
+        args: apply -f ./.github/workflows/k8s
