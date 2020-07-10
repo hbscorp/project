@@ -13,4 +13,4 @@ jobs:
                 # Username used to login docker registry
                 username: ${{ secrets.DOCKER_USERNAME }}
                 # Password used to login docker registry
-                password: ${{ secrets.PASSWORD }}
+                password: ${{ secrets.DOCKER_PASSWORD }}
