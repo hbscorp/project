@@ -17,7 +17,7 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
       
-    - name: Push docker image
+    #- name: Push docker image
     - uses: docker/build-push-action@v1
       with:
           username: ${{ secrets.DOCKER_USERNAME }}
