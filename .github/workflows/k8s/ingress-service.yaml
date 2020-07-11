@@ -5,10 +5,6 @@ metadata:
   annotations:
     kubernetes.io/ingress.class: nginx
 spec:
-  rules:
-    - http:
-        paths:
-          - path: /royalhas
-            backend:
-              serviceName: server-cluster-ip-service
-              servicePort: web-ports
+  backend:
+    serviceName: server-cluster-ip-service
+    servicePort: 8080
