@@ -10,5 +10,5 @@ spec:
         paths:
           - path: /*
             backend:
-              serviceName: server-cluster-ip-service
+              serviceName: server-deployment
               servicePort: web-ports
