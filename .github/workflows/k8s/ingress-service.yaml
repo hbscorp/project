@@ -5,4 +5,4 @@ metadata:
 spec:
   backend:
     serviceName: server-cluster-ip-service
-    servicePort: 8080
+    servicePort: web-ports
