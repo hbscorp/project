@@ -1,6 +1,6 @@
 name: Terraform deploy to GCP
 
-on: [push]
+#on: [push]
 
 jobs:
 	build:
