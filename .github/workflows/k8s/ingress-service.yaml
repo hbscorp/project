@@ -4,5 +4,5 @@ metadata:
   name: ingress-service
 spec:
   backend:
-    serviceName: server-cluster-ip-service
+    serviceName: web_ports
     servicePort: 8080
