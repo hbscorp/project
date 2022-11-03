@@ -7,5 +7,5 @@ RUN mvn -f /app/pom.xml clean package
 #package
 FROM openjdk:16-slim
 COPY --from=build /app/target/demo-0.0.1-SNAPSHOT.jar /usr/local/lib/demo.jar
-EXPOSE 8080
+EXPOSE 443
 ENTRYPOINT ["java","-jar","/usr/local/lib/demo.jar"] 
