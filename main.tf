@@ -8,7 +8,7 @@ module "cluster" {
   source  = "jetstack/gke-cluster/google"
   version = "0.2.0-alpha1"
 
-  # These values are set from the terrafrom.tfvas file
+  # These values are set from the terrafrom.tfvas file.
   gcp_project_id                         = var.gcp_project_id
   cluster_name                           = var.cluster_name
   gcp_location                           = var.gcp_location
