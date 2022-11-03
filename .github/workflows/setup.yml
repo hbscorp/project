@@ -1,4 +1,4 @@
-name: 2-actions-ci-cd-aks-tf
+name: Deploy App via Terraform
 
 on:
   push:
@@ -14,7 +14,7 @@ jobs:
   build-deploy-aks:
     runs-on: ubuntu-latest
     env:
-      DOCKER_REPOSITORY: houssemdocker
+      DOCKER_REPOSITORY: hbscorp
       IMAGE_NAME: web-app
       IMAGE_TAG: ${{ github.run_number }} # ${{ github.sha }}
       AKS_RESOURCE_GROUP: rg-aks-cluster-tf-023
@@ -36,7 +36,7 @@ jobs:
     - name: Build Docker Image
       working-directory: .
       run:
-        docker build ./MvcApp/ --file ./MvcApp/Dockerfile --tag $DOCKER_REPOSITORY/$IMAGE_NAME:$GITHUB_RUN_NUMBER --build-arg=token=ZGEzNTQ5Y2QyNjAx --no-cache
+        docker build . --file .Dockerfile --tag $DOCKER_REPOSITORY/$IMAGE_NAME:$GITHUB_RUN_NUMBER --build-arg=token=ZGEzNTQ5Y2QyNjAx --no-cache
   
     - name: Run Trivy vulnerability scanner
       uses: aquasecurity/trivy-action@master
