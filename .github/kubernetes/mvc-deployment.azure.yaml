@@ -19,7 +19,7 @@ spec:
         image: __DOCKER_REPOSITORY__/__IMAGE_NAME__:__IMAGE_TAG__
         # image: __ACR_NAME__.azurecr.io/__DOCKER_IMAGE__:__TAG__
         ports:
-        - containerPort: 80
+        - containerPort: 443
         resources:
           limits:
             cpu: 300m
@@ -46,6 +46,6 @@ spec:
     app: mvc
   ports:
   - protocol: TCP
-    port: 80
-    targetPort: 80
+    port: 443
+    targetPort: 443
   type: LoadBalancer #NodePort
