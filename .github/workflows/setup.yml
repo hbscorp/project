@@ -21,7 +21,7 @@ jobs:
       AKS_NAME: aks-cluster
       ACR_NAME: acrforakstf023
       TERRAFORM_VERSION: 1.1.9
-      WORKING_DIRECTORY: infra
+      WORKING_DIRECTORY: .github/infra
     
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
@@ -77,7 +77,7 @@ jobs:
       with:
         find: "azurerm"
         replace: "local"
-        include: "infra/backend.tf"
+        include: ".github/infra/backend.tf"
         regex: true
 
     # Install the latest version of Terraform CLI
