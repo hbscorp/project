@@ -54,8 +54,10 @@ jobs:
         severity: 'MEDIUM,HIGH,CRITICAL'
          
     - name: Push Image to Docker Hub
-      run:
-        sudo docker push ${{ env.DOCKER_REPOSITORY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+      uses: docker/build-push-action@v2
+      with:
+        push: true
+        tags: '${{ env.DOCKER_REPOSITORY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}'
 
     - name: Replace tokens in terraform.tfvars
       uses: cschleiden/replace-tokens@v1.0
